@@ -16,4 +16,4 @@ public class Exercice1 {
         System.out.println(author.charAt(3));
         System.out.println((int)author.charAt(3));
     }}
-    }}
+    
