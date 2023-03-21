@@ -19,7 +19,8 @@ public class Conditionif {
         Scanner scan = new Scanner( System.in );
 
         System.out.println("Entrez la note :");
-        float note = scan.nextFloat();
+        //float note = scan.nextFloat();
+         double note = scan.nextDouble();
 
         if (note <5)
         {
@@ -51,8 +52,35 @@ public class Conditionif {
         }
         else 
         {
+            System.out.println("Super !");
+        }
+
+        /**
+        // 1
+        Scanner scan = new Scanner( System.in );
+        System.out.println("Veuillez entrer votre note de Java : ");
+        int note_java = scan.nextInt();
+
+        // 2
+        if( note_java < 5 ) {
+            System.out.println("Trés mauvais");
+        }
+        else if( note_java < 10 ) {
+            System.out.println("Mauvais");
+        }
+        else if( note_java < 15 ) {
+            System.out.println("Bien");
+        }
+        else if( note_java < 18 ) {
+            System.out.println("Trés bien");
+        }
+        else if( note_java < 20 )  {
+            System.out.println("Excellent");
+        }
+        else {
             System.out.println("Parfait !");
         }
+         */
 
     }
     }
