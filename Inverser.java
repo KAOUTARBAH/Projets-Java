@@ -28,6 +28,18 @@ public class Inverser {
         System.out.println("la valeur x :" + x+ "la valeur y :" +y);
         System.out.println(String.format("la valeur de x = %d y = %d",x, y));
 
+        // 5
+        x = x + y ; // Avec x = 10 et  y = 5, x passe à 15 (la somme de xet y)
+        y = x - y ; // Y passe à 15 - 5 soit 10  (y = total - y) pour avoir 
+        x = x - y ; // X passe à 15 - 10 soit 5 (x= total -y) pour avoir x
+
+        // 6 
+        System.out.println(
+            String.format(
+                "X = %d et Y = %d", x, y
+            )
+        );
+
          /**
           // 1 
         Scanner mon_scan = new Scanner( System.in );
