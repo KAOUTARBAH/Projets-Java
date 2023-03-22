@@ -24,8 +24,22 @@ public class Table{
         my_array[2] *= my_array[4];
         System.out.println(my_array [2]);
 
+        //Structure For
         for(int i = 0; i<my_array.length;i++){
              System.out.println("l'indexe " +i+ " la valeur " +my_array [i]);
+             
+        }
+
+        //Structure Foreach
+        for(int val_array : my_array){
+            System.out.println(val_array);
+        }
+
+        int i=0;
+        while(i < my_array.length){
+            i++; 
+            //System.out.println(i);
+            System.out.println("l'indexe " +i+ " la valeur " +my_array [i]);
         }
 
        /**
