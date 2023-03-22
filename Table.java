@@ -27,13 +27,23 @@ public class Table{
         //Structure For
         for(int i = 0; i<my_array.length;i++){
              System.out.println("l'indexe " +i+ " la valeur " +my_array [i]);
-             
+
         }
 
         //Structure Foreach
         for(int val_array : my_array){
             System.out.println(val_array);
         }
+
+        //Structure Foreach
+        /*for(int val_array : my_array){
+            if(val_array.equals("17")){
+                break;
+            }
+            System.out.println(val_array);
+        }
+        */
+
 
         int i=0;
         while(i < my_array.length){
