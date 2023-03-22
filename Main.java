@@ -19,8 +19,9 @@ public class Main {
          int x=10;
         int y=20;
         int res=x+y;
-        char mon_char = 41;
-        System.out.println(int(mon_char));
+        //char mon_char = 41;
+        //char mon_char = "41";
+        //System.out.println(int(mon_char));
         System.out.printf("The sum of %d and %d is %d.",x,y,res);
        
         System.out.println("Hello world\n");
