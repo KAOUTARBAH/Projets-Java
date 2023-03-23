@@ -11,7 +11,7 @@
         
         */
 
-        import java.util.Scanner;
+import java.util.Scanner;
 
 public class Table2{
     public static void main(String[] args){
@@ -20,10 +20,10 @@ public class Table2{
         int n = scan.nextInt();
         int[] array =new int[n];
         int somme =0;
-        int valMin = 0;
-        int valMax =0;
-        int valMinPaire = 0;
-        int valMaxPaire =0;
+        int valMin = array[0];
+        int valMax =array[0];
+        int valMinPaire = array[0];
+        int valMaxPaire =array[0];
 
         for(int i = 0 ; i<array.length ; i++){
             array[i]= i*3;
@@ -43,25 +43,30 @@ public class Table2{
 
         }
          System.out.println("la somme : " +somme);
-
+         System.out.println("\n");
          
-         for(int val:array){      
-                if (val > valMax) 
-                    valMax=val;
+         //Structure Foreach
+         for(int valeur:array){      
+                if (valeur > valMax) 
+                    valMax=valeur;
                 
-                if (val < valMin) 
-                    valMin=val;
+                if (valeur < valMin) 
+                    valMin=valeur;
                 
-                 System.out.print(" "+val+" ");
-                
+                 System.out.print(" "+valeur+" ");                
              }
 
                 System.out.println("\n");
-                System.out.println("La valeur Max " +valMax);
-                System.out.println("La valeur Min " +valMin);
-                System.out.println("La valeur Max paire " +valMaxPaire);
-                System.out.println("La valeur Min paire " +valMinPaire);
+                //System.out.println("La valeur Max : " +valMax);
+                //System.out.println("La valeur Min : " +valMin);
+                // System.out.println("La valeur Max paire : " +valMaxPaire);
+                //System.out.println("La valeur Min paire : " +valMinPaire);
+                System.out.println(
+                    String.format("Max :%d et Min : %d ", valMax, +valMin));
 
+                System.out.println(
+                    String.format("Max paire :%d et Min paire: %d ", valMaxPaire, +valMinPaire));
+             
     }
 }
 
@@ -87,4 +92,27 @@ Scanner scan = new Scanner( System.in );
         }
 
         System.out.println("Somme : " + somme );
+
+        
+            7. A l'aide d'un foreach, rechercher et afficher la valeur maximale et la valeur minimale du tableau et les afficher
+        
+        int valeur_min = array[0] ;
+        int valeur_max = array[0] ;
+        for( int my_int : array ) {
+
+            // Recherche du minimum
+            if( valeur_min > my_int ) {
+                valeur_min = my_int ;
+            }
+
+            // Recherche du maximum
+            else if( valeur_max < my_int ) {
+                valeur_max = my_int ;
+            }
+
+        }
+
+        System.out.println(
+            String.format("Max : %d et Min : %d", valeur_max, valeur_min)
+        );
  */
