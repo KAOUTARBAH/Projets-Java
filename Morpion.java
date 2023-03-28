@@ -65,30 +65,53 @@ public class Morpion {
             }       
     }
 
+    int nbr_vide = free_cells(grille);
+    System.out.println("nbr vide : " +nbr_vide);
+    
     //constion de test 
-    int x =5;
-    while (x==5){
-        x++;
+    
+    //int x =5;
+    //while (x==5){
+    while (nbr_vide>0)
+    {
+        //x++;
+
+        if (nbr_vide % 2 == 0) {
+            joueur = 'X';
+        }
+        else {
+            joueur = 'O';
+        }
         System.out.println("le numéro du tour " +compteur_tour + " le joueur " +joueur);
 
+        
+
+        System.out.println("entrer la ligne  0-1-2" );
         int ligne =scan.nextInt();
+        System.out.println("entrer la ligne  0-1-2" );
         int colonne = scan.nextInt();
         
         //Vérifier la case est vide
-         if (grille[ligne][colonne] != '*')
-        {        
-                System.out.print("ocuupé");
-                       
+        if (ligne < 0 || ligne > 2 ||  colonne < 0  || colonne > 2 )
+        {                
+            System.out.println("valeur incorrecte");    
+            continue;            
         }
         //verifier les valeurs entre 0 et 2
-         else  if (ligne<0 || ligne>2 || colonne>2 || colonne<0)
-         { 
-            System.out.print("valeur incorrecte"); 
+        else if (grille[ligne][colonne] != '*') 
+        { 
+            System.out.println("La case choisis déja ocuupé!!!!");
+            continue;
             
-         }
-          grille[ligne][colonne]= joueur;
-
-        
+           // break;
+           /* System.out.println("Rentrer la ligne  0-1-2" );
+            ligne =scan.nextInt();
+            System.out.println("Rentrer la ligne  0-1-2" );
+            colonne = scan.nextInt();
+            */
+        }
+       
+        grille[ligne][colonne]= joueur;
         //Afficher la grille
         System.out.println("  0 1 2");
        
@@ -102,7 +125,14 @@ public class Morpion {
             }
             System.out.println();
         }
+
+        
+        
+        nbr_vide--;
+        System.out.println("nbr vide : " +nbr_vide);
     }
+
+    
 
    }
 
